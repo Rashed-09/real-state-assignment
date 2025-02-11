@@ -1,0 +1,242 @@
+[
+  {
+    "id": 101,
+    "image": "https://ibb.co.com/cYDkg5J",
+    "title": "Modern 3-Bedroom Apartment",
+    "location": {
+      "city": "New York",
+      "state": "NY",
+      "zip_code": "10001",
+      "address": "123 Main Street"
+    },
+    "company_name": "Urban Realty Group",
+    "price": "$2,500/month",
+    "property_type": "Apartment",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": 1200,
+    "features": ["Balcony", "Gym Access", "Swimming Pool"],
+    "description": "A modern apartment in the heart of New York City with breathtaking city views.",
+    "availability": true
+  },
+  {
+    "id": 102,
+    "image": "https://ibb.co.com/kHMFJHS",
+    "title": "Spacious 4-Bedroom House",
+    "location": {
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip_code": "90001",
+      "address": "456 Elm Street"
+    },
+    "company_name": "West Coast Homes",
+    "price": "$4,500/month",
+    "property_type": "House",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "square_feet": 2500,
+    "features": ["Garden", "Garage", "Pet Friendly"],
+    "description": "A family-friendly home with ample outdoor space in a quiet neighborhood.",
+    "availability": false
+  },
+  {
+    "id": 103,
+    "image": "https://ibb.co.com/M2LPfWQ",
+    "title": "Cozy Studio in Downtown",
+    "location": {
+      "city": "Chicago",
+      "state": "IL",
+      "zip_code": "60601",
+      "address": "789 Oak Avenue"
+    },
+    "company_name": "Midwest Rentals",
+    "price": "$1,200/month",
+    "property_type": "Studio",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "square_feet": 500,
+    "features": ["Furnished", "Near Public Transport"],
+    "description": "A stylish studio in downtown Chicago, ideal for young professionals.",
+    "availability": true
+  },
+  {
+    "id": 104,
+    "image": "https://ibb.co.com/TTLfTn4",
+    "title": "Luxury 5-Bedroom Villa",
+    "location": {
+      "city": "Miami",
+      "state": "FL",
+      "zip_code": "33101",
+      "address": "987 Palm Lane"
+    },
+    "company_name": "Sunshine Properties",
+    "price": "$10,000/month",
+    "property_type": "Villa",
+    "bedrooms": 5,
+    "bathrooms": 5,
+    "square_feet": 4000,
+    "features": ["Private Pool", "Ocean View", "24/7 Security"],
+    "description": "An opulent villa with stunning ocean views in Miami's premium location.",
+    "availability": true
+  },
+  {
+    "id": 105,
+    "image": "https://ibb.co.com/85nkPHN",
+    "title": "Charming 2-Bedroom Cottage",
+    "location": {
+      "city": "Portland",
+      "state": "OR",
+      "zip_code": "97201",
+      "address": "32 Maple Lane"
+    },
+    "company_name": "Nature Realty",
+    "price": "$1,800/month",
+    "property_type": "Cottage",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "square_feet": 1100,
+    "features": ["Fireplace", "Backyard", "Pet Friendly"],
+    "description": "A cozy cottage surrounded by nature, perfect for a serene lifestyle.",
+    "availability": true
+  },
+  {
+    "id": 106,
+    "image": "https://ibb.co.com/4dzbkrk",
+    "title": "Contemporary Loft Apartment",
+    "location": {
+      "city": "San Francisco",
+      "state": "CA",
+      "zip_code": "94101",
+      "address": "88 Market Street"
+    },
+    "company_name": "Bay Area Living",
+    "price": "$3,000/month",
+    "property_type": "Loft",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "square_feet": 1400,
+    "features": ["Open Floor Plan", "Rooftop Deck"],
+    "description": "A stylish loft apartment with modern finishes and great city views.",
+    "availability": true
+  },
+  {
+    "id": 107,
+    "image": "https://ibb.co.com/K9QYPTW",
+    "title": "Beachfront 3-Bedroom Condo",
+    "location": {
+      "city": "Santa Monica",
+      "state": "CA",
+      "zip_code": "90401",
+      "address": "25 Ocean View Drive"
+    },
+    "company_name": "Pacific Properties",
+    "price": "$5,500/month",
+    "property_type": "Condo",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": 1500,
+    "features": ["Ocean View", "Private Parking", "Gym"],
+    "description": "A luxury condo with stunning beachfront access and modern amenities.",
+    "availability": false
+  },
+  {
+    "id": 108,
+    "image": "https://ibb.co.com/RHHQPyB",
+    "title": "Elegant 4-Bedroom Townhouse",
+    "location": {
+      "city": "Seattle",
+      "state": "WA",
+      "zip_code": "98101",
+      "address": "100 Pine Street"
+    },
+    "company_name": "Emerald City Realty",
+    "price": "$3,800/month",
+    "property_type": "Townhouse",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "square_feet": 1800,
+    "features": ["Garage", "Near Schools", "Balcony"],
+    "description": "A spacious townhouse located in a family-friendly Seattle neighborhood.",
+    "availability": true
+  },
+  {
+    "id": 109,
+    "image": "https://ibb.co.com/W57n9DB",
+    "title": "Affordable 1-Bedroom Apartment",
+    "location": {
+      "city": "Austin",
+      "state": "TX",
+      "zip_code": "73301",
+      "address": "50 Lake View Drive"
+    },
+    "company_name": "Austin Rentals",
+    "price": "$900/month",
+    "property_type": "Apartment",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "square_feet": 650,
+    "features": ["Swimming Pool", "Laundry Facility"],
+    "description": "An affordable apartment with basic amenities in a convenient location.",
+    "availability": true
+  },
+  {
+    "id": 110,
+    "image": "https://ibb.co.com/SNK8w1L",
+    "title": "Rustic Cabin in the Woods",
+    "location": {
+      "city": "Aspen",
+      "state": "CO",
+      "zip_code": "81611",
+      "address": "12 Forest Lane"
+    },
+    "company_name": "Mountain Homes",
+    "price": "$2,200/month",
+    "property_type": "Cabin",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "square_feet": 1000,
+    "features": ["Wood Burning Stove", "Hiking Trails Nearby"],
+    "description": "A rustic cabin perfect for outdoor enthusiasts in Aspen.",
+    "availability": false
+  },
+  {
+    "id": 111,
+    "image": "https://ibb.co.com/c8BNqBy",
+    "title": "Luxury Downtown Penthouse",
+    "location": {
+      "city": "Boston",
+      "state": "MA",
+      "zip_code": "02101",
+      "address": "77 Beacon Street"
+    },
+    "company_name": "Beacon Realty",
+    "price": "$8,000/month",
+    "property_type": "Penthouse",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "square_feet": 2500,
+    "features": ["Private Terrace", "City Views", "24/7 Concierge"],
+    "description": "A stunning penthouse offering luxury living in the heart of Boston.",
+    "availability": true
+  },
+  {
+    "id": 112,
+    "image": "https://ibb.co.com/hZ4zv8d",
+    "title": "Cozy Suburban Home",
+    "location": {
+      "city": "Dallas",
+      "state": "TX",
+      "zip_code": "75201",
+      "address": "23 Willow Lane"
+    },
+    "company_name": "Suburban Estates",
+    "price": "$2,700/month",
+    "property_type": "House",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": 1600,
+    "features": ["Garage", "Fenced Yard", "Nearby Schools"],
+    "description": "A charming home in a quiet Dallas suburb, ideal for families.",
+    "availability": true
+  }
+]

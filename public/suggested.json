@@ -1,0 +1,128 @@
+[
+  {
+    "image": "https://ibb.co.com/cYDkg5J",
+    "companyName": "Sunny Realty",
+    "location": "Los Angeles, CA",
+    "price": 750000,
+    "roomSize": 111,  
+    "bedTableQuantity": [2, 1], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/2.jpg",
+    "companyName": "Ocean View Properties",
+    "location": "Miami, FL",
+    "price": 1200000,
+    "roomSize": 167, 
+    "bedTableQuantity": [3, 2], 
+    "isTrue": false
+  },
+  {
+    "image": "../src/assets/3.jpg",
+    "companyName": "Mountain Homes",
+    "location": "Denver, CO",
+    "price": 950000,
+    "roomSize": 139,  
+    "bedTableQuantity": [2, 1], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/4.jpg",
+    "companyName": "Cityscape Realty",
+    "location": "New York, NY",
+    "price": 1500000,
+    "roomSize": 186,  
+    "bedTableQuantity": [4, 3], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/5.jpg",
+    "companyName": "Green Valley Homes",
+    "location": "Austin, TX",
+    "price": 850000,
+    "roomSize": 149,  
+    "bedTableQuantity": [3, 2], 
+    "isTrue": false
+  },
+  {
+    "image": "../src/assets/6.jpg",
+    "companyName": "Golden Gate Properties",
+    "location": "San Francisco, CA",
+    "price": 2000000,
+    "roomSize": 204, 
+    "bedTableQuantity": [4, 3], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/7.jpg",
+    "companyName": "Lakeside Realty",
+    "location": "Chicago, IL",
+    "price": 650000,
+    "roomSize": 130, 
+    "bedTableQuantity": [2, 1], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/8.jpg",
+    "companyName": "Desert Oasis Homes",
+    "location": "Phoenix, AZ",
+    "price": 500000,
+    "roomSize": 121, 
+    "bedTableQuantity": [2, 1], 
+    "isTrue": false
+  },
+  {
+    "image": "../src/assets/9.jpg",
+    "companyName": "Historic Estates",
+    "location": "Boston, MA",
+    "price": 1800000,
+    "roomSize": 232, 
+    "bedTableQuantity": [5, 4], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/10.jpg",
+    "companyName": "Sunset Realty",
+    "location": "San Diego, CA",
+    "price": 900000,
+    "roomSize": 158, 
+    "bedTableQuantity": [3, 2], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/11.jpg",
+    "companyName": "Riverfront Properties",
+    "location": "Portland, OR",
+    "price": 1100000,
+    "roomSize": 177, 
+    "bedTableQuantity": [3, 2], 
+    "isTrue": false
+  },
+  {
+    "image": "../src/assets/12.jpg",
+    "companyName": "Skyline Realty",
+    "location": "Seattle, WA",
+    "price": 1300000,
+    "roomSize": 195, 
+    "bedTableQuantity": [4, 3], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/13.jpg",
+    "companyName": "Pine Forest Homes",
+    "location": "Atlanta, GA",
+    "price": 700000,
+    "roomSize": 139, 
+    "bedTableQuantity": [2, 1], 
+    "isTrue": true
+  },
+  {
+    "image": "../src/assets/14.jpg",
+    "companyName": "Urban Living Properties",
+    "location": "Dallas, TX",
+    "price": 800000,
+    "roomSize": 149, 
+    "bedTableQuantity": [3, 2], 
+    "isTrue": false
+  }
+]

@@ -38,7 +38,7 @@ const HomeLayout = () => {
         </header>
         <main className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
           {/* left site aside */}
-          <aside className="border md:col-span-2 lg:col-span-3">
+          <aside className="md:col-span-2 lg:col-span-3">
             <div>
               <h2 className="text-center font-bold mt-3">
                 FEATURED PROPERTIES
@@ -51,7 +51,7 @@ const HomeLayout = () => {
             </div>
           </aside>
           {/* Right site aside */}
-          <aside className="border w-full">
+          <aside className="">
             <h2 className="text-center font-bold mt-3">SUGGESTED FEATURED</h2>
             <div>
               {houses.map((s, i) => (

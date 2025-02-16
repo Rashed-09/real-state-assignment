@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import pic0 from "../assets/0.png"
 
 
 const Navbar = () => {
@@ -8,6 +9,7 @@ const Navbar = () => {
       <NavLink to={"/forRent"}>For Rent</NavLink>
       <NavLink to={"/register"}>Register</NavLink>
       <NavLink to={"/login"}>Login</NavLink>
+      <NavLink to={"/updateprofile"}>UpDate Profile</NavLink>
   </div>
 
     return (
@@ -40,9 +42,18 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl text-green-400">BD Housing</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {links}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
+        </div>
+        <div className="relative navbar-end gap-3">
+          <img
+            className="w-8 h-8 rounded-full"
+            src={pic0}
+            alt="image"
+          />
+          <button className="btn">Login</button>
+          <h4 className="bottom-4/12 text-xs left-[59%] absolute opacity-0 hover:opacity-50 font-bold bg-opacity-40 text-black border-2 p-3 rounded">
+            Abdur Rashed
+          </h4>
         </div>
       </div>
     );

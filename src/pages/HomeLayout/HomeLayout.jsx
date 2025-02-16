@@ -36,7 +36,7 @@ const HomeLayout = () => {
             </div>
           </div>
         </header>
-        <main className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <main className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
           {/* left site aside */}
           <aside className="md:col-span-2 lg:col-span-3">
             <div>
@@ -44,7 +44,7 @@ const HomeLayout = () => {
                 FEATURED PROPERTIES
               </h2>
             </div>
-            <div className="grid lg:grid-cols-3">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3">
               {houses.map((h, i) => (
                 <Houses key={i} house={h}></Houses>
               ))}

@@ -6,11 +6,11 @@ const Root = () => {
     return (
       <div className="bg-white fontFamily text-black">
         <header className="border-b">
-          <div className="w-[80%] mx-auto">
+          <div className="w-[90%] mx-auto">
             <Navbar></Navbar>
           </div>
         </header>
-        <main className="w-[80%] mx-auto">
+        <main className="w-[90%] mx-auto">
           <Outlet></Outlet>
         </main>
       </div>

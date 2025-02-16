@@ -1,31 +1,39 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ContextProvider } from "../../AuthContext/AuthContext";
+import { ContextProvider } from "../../../AuthContext/AuthContext";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
-const Register = () => {
-  const { createUsers } = useContext(ContextProvider)
+const Login = () => {
+  const { loginUsers } = useContext(ContextProvider);
+  const [error, setError] = useState('')
   const navigate = useNavigate()
 
 
-  const registerHandlar = (e) => {
-    e.preventDefault();
+  const loginHandlar = e => {
+    e.preventDefault()
     const emailValue = e.target.email.value;
     const passwordValue = e.target.password.value;
 
-    createUsers(emailValue, passwordValue)
+    setError('')
+    loginUsers(emailValue, passwordValue)
       .then(() => {
-        navigate("/");
+        navigate("/")
       })
-      .catch((error) => console.log(error.message));
-  };
+      .catch(error => {
+        const message = error.message;
+        setError(message)
+      });
+
+  }
+
     return (
       <div className="hero bg-white min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Register now!</h1>
+            <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
           <div className="card bg-white w-full max-w-sm shrink-0 shadow-2xl">
-            <form onSubmit={registerHandlar} className="card-body">
+            <form onSubmit={loginHandlar} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -56,19 +64,31 @@ const Register = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary text-lg">Register</button>
+                <button className="btn btn-primary text-lg">Login</button>
               </div>
-              <div>
-                <p className="flex gap-3">
-                  Do You have an account?{" "}
-                  <Link
-                    className="font-bold text-blue-600 underline"
-                    to={"/login"}
-                  >
-                    Login
-                  </Link>
-                </p>
+              <p className="flex gap-3">
+                Do not have an account?
+                <Link
+                  className="font-bold text-blue-600 underline"
+                  to={"/register"}
+                >
+                  Register
+                </Link>
+              </p>
+              <div className="flex items-center justify-center gap-3 text-center border-2 p-1 rounded">
+                <FaGoogle/>
+                <h2 className="font-bold">
+                  Sign In <span className="font-bold text-blue-600">Google</span>
+                </h2>
               </div>
+              <div className="flex items-center justify-center gap-3 text-center border-2 p-1 rounded">
+                <FaGithub/>
+                <h2 className="font-bold">
+                  Sign In <span className="font-bold text-blue-600">Github</span>
+                </h2>
+              </div>
+              {/* error Message  */}
+              {error && <p className="text-red-500">{error}</p>}
             </form>
           </div>
         </div>
@@ -76,4 +96,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Login;

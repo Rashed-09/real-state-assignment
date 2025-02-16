@@ -1,5 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import pic0 from "../assets/0.png"
+import { useContext } from "react";
+import { ContextProvider } from "../AuthContext/AuthContext";
 
 
 const Navbar = () => {
@@ -11,6 +13,21 @@ const Navbar = () => {
       <NavLink to={"/login"}>Login</NavLink>
       <NavLink to={"/updateprofile"}>UpDate Profile</NavLink>
   </div>
+
+  const {logOut, user} = useContext(ContextProvider)
+  const navigate = useNavigate()
+
+  const logOutHandlar = () => {
+
+    // Logout Promise
+    logOut()
+    .then(() => {
+      navigate("/login")
+    })
+    .catch(() => {
+      console.log("User is not available here")
+    })
+  }
 
     return (
       <div className="navbar">
@@ -44,17 +61,23 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="relative navbar-end gap-3">
-          <img
-            className="w-8 h-8 rounded-full"
-            src={pic0}
-            alt="image"
-          />
-          <button className="btn">Login</button>
-          <h4 className="bottom-4/12 text-xs left-[59%] absolute opacity-0 hover:opacity-50 font-bold bg-opacity-40 text-black border-2 p-3 rounded">
-            Abdur Rashed
-          </h4>
-        </div>
+        {user ? (
+          <div className="relative navbar-end gap-3">
+            <img className="w-8 h-8 rounded-full" src={pic0} alt="image" />
+            <button onClick={logOutHandlar} className="btn">
+              Log Out
+            </button>
+            <h4 className="bottom-4/12 text-xs left-[59%] absolute opacity-0 hover:opacity-50 font-bold bg-opacity-40 text-black border-2 p-3 rounded">
+              Abdur Rashed
+            </h4>
+          </div>
+        ) : (
+          <div className="navbar-end">
+            <Link to={"/login"}>
+              <button className="btn">Login</button>
+            </Link>
+          </div>
+        )}
       </div>
     );
 };

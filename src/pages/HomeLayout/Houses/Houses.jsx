@@ -24,7 +24,7 @@ const Houses = ({house}) => {
           <NavLink className="flex flex-col gap-3" to={`/details/:${id}`}>
             <div className="flex space-x-2 items-center">
               <h2 className="font-semibold">{title}</h2>
-              <span className="bg-gray-500 px-3 py-1 rounded text-xs font-bold text-white">
+              <span className="bg-gray-500 px-3 py-1 rounded text-xs font-bold text-white hover:bg-red-600">
                 SALE
               </span>
             </div>

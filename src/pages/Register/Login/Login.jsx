@@ -4,11 +4,11 @@ import { ContextProvider } from "../../../AuthContext/AuthContext";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-  const { loginUsers } = useContext(ContextProvider);
+  const { loginUsers, googleLogin, githubLogin } = useContext(ContextProvider);
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
-
+  // Email password based login
   const loginHandlar = e => {
     e.preventDefault()
     const emailValue = e.target.email.value;
@@ -19,11 +19,35 @@ const Login = () => {
       .then(() => {
         navigate("/")
       })
-      .catch(error => {
-        const message = error.message;
-        setError(message)
+      .catch(() => {
+        setError(`I don't getting This account`)
       });
 
+  }
+
+  // Google Login
+  const googleHandlar = () => {
+    setError("")
+    googleLogin()
+    .then(() => {
+      console.log("done")
+    })
+    .catch(() => {
+      setError("Google Login Failed");
+    })
+  }
+
+
+  // Github Login
+  const githubHandlar = () => {
+    setError("")
+    githubLogin()
+    .then(res => {
+      console.log(res.user)
+    })
+    .catch(() => {
+      setError("Github Login Failed");
+    })
   }
 
     return (
@@ -75,16 +99,24 @@ const Login = () => {
                   Register
                 </Link>
               </p>
-              <div className="flex items-center justify-center gap-3 text-center border-2 p-1 rounded">
-                <FaGoogle/>
+              <div
+                onClick={googleHandlar}
+                className="flex items-center justify-center gap-3 text-center border-2 p-1 rounded cursor-pointer"
+              >
+                <FaGoogle />
                 <h2 className="font-bold">
-                  Sign In <span className="font-bold text-blue-600">Google</span>
+                  Sign In{" "}
+                  <span className="font-bold text-blue-600">Google</span>
                 </h2>
               </div>
-              <div className="flex items-center justify-center gap-3 text-center border-2 p-1 rounded">
-                <FaGithub/>
+              <div
+                onClick={githubHandlar}
+                className="flex items-center justify-center gap-3 text-center border-2 p-1 rounded cursor-pointer"
+              >
+                <FaGithub />
                 <h2 className="font-bold">
-                  Sign In <span className="font-bold text-blue-600">Github</span>
+                  Sign In{" "}
+                  <span className="font-bold text-blue-600">Github</span>
                 </h2>
               </div>
               {/* error Message  */}

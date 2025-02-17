@@ -1,22 +1,39 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ContextProvider } from "../../AuthContext/AuthContext";
 
 const Register = () => {
   const { createUsers } = useContext(ContextProvider)
   const navigate = useNavigate()
-
+  const [passwordError, setPasswordError] = useState('')
 
   const registerHandlar = (e) => {
     e.preventDefault();
+    setPasswordError("")
     const emailValue = e.target.email.value;
     const passwordValue = e.target.password.value;
 
+    // password verification
+    if(passwordValue.length < 6) {
+      return setPasswordError("Pasword must 6 be character")
+    }
+    else if(!/[A-Z]/.test(passwordValue)) {
+      return setPasswordError("Password must be at least one Uppercase")
+    }
+    else if(!/[a-z]/.test(passwordValue)) {
+      return setPasswordError("Password must be at least one Lowercase");
+    }
+    
+    // user create
     createUsers(emailValue, passwordValue)
-      .then(() => {
-        navigate("/");
+    .then(() => {
+      alert("login successful")
+      navigate("/");
       })
-      .catch((error) => console.log(error.message));
+      .catch((e) => {
+        const message = e.message;
+        setPasswordError(message)
+      });
   };
     return (
       <div className="hero bg-white min-h-screen">
@@ -59,7 +76,6 @@ const Register = () => {
                   name="photo"
                   placeholder="Photo URL"
                   className="input input-bordered bg-white text-black"
-                  required
                 />
               </div>
               <div className="form-control">
@@ -93,6 +109,9 @@ const Register = () => {
                   </Link>
                 </p>
               </div>
+              {
+                passwordError && <p>{passwordError}</p>
+              }
             </form>
           </div>
         </div>

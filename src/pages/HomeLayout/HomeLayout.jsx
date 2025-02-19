@@ -60,7 +60,6 @@ const HomeLayout = () => {
             </div>
           </aside>
         </main>
-        <footer>Footer</footer>
       </div>
     );
 };

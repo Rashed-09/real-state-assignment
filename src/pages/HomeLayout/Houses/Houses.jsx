@@ -21,7 +21,7 @@ const Houses = ({house}) => {
             <img src={image} alt="picture" />
             <p className="absolute top-12 bg-green-600 text-white font-medium rounded-r-3xl pr-3 text-xs py-1">Call For Price</p>
           </div>
-          <NavLink className="flex flex-col gap-3" to={`/details/:${id}`}>
+          <NavLink className="flex flex-col gap-3" to={`/details/${id}`}>
             <div className="flex space-x-2 items-center">
               <h2 className="font-semibold">{title}</h2>
               <span className="bg-gray-500 px-3 py-1 rounded text-xs font-bold text-white hover:bg-red-600">

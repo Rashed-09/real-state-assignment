@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomeLayout></HomeLayout>,
-        loader: () => fetch("houses.json"),
+        loader: () => fetch("/houses.json"),
       },
       {
         path: "/register",
@@ -25,14 +25,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: "/details/:id",
-        element: <HouseDetails></HouseDetails>
+        element: <HouseDetails></HouseDetails>,
+        loader: () => fetch("/houses.json"),
       },
     ],
-  }
+  },
 ]);
 
 export default router;

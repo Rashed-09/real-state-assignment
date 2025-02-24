@@ -6,6 +6,8 @@ import HouseDetails from "../pages/HomeLayout/Houses/HouseDetails";
 import Login from "../pages/Register/Login/Login";
 import Error404 from "../ErrorPage/Error404";
 import ForSell from "../pages/ForRentAndSell/ForSell";
+import PrivetRout from "../pages/ProtectedRout/PrivetRout";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 
 
 
@@ -34,8 +36,16 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
+        path: "/updateprofile",
+        element: <UpdateProfile></UpdateProfile>
+      },
+      {
         path: "/details/:id",
-        element: <HouseDetails></HouseDetails>,
+        element: (
+          <PrivetRout>
+            <HouseDetails></HouseDetails>
+          </PrivetRout>
+        ),
         loader: () => fetch("/houses.json"),
       },
     ],

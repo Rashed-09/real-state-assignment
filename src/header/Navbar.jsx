@@ -1,5 +1,4 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import pic0 from "../assets/0.png"
 import { useContext } from "react";
 import { ContextProvider } from "../AuthContext/AuthContext";
 
@@ -62,12 +61,12 @@ const Navbar = () => {
         </div>
         {user ? (
           <div className="relative navbar-end gap-3">
-            <img className="w-8 h-8 rounded-full" src={pic0} alt="image" />
+            <img className="w-8 h-8 rounded-full" src={user.photoURL} alt="image" />
             <button onClick={logOutHandlar} className="btn">
               Log Out
             </button>
             <h4 className="bottom-4/12 text-xs left-[59%] absolute opacity-0 hover:opacity-50 font-bold bg-opacity-40 text-black border-2 p-3 rounded">
-              Abdur Rashed
+             {user.displayName}
             </h4>
           </div>
         ) : (

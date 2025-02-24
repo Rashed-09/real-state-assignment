@@ -28,7 +28,7 @@ const HouseDetails = () => {
 
 
     return (
-      <div className="grid lg:grid-cols-4 gap-4">
+      <div className="grid lg:grid-cols-4 gap-4 my-5">
         <div className="card bg-white shadow-xl lg:col-span-3">
           <h1 className="text-sm md:text-xl lg:text-3xl">
             {bedrooms} Bedrooms, {bathrooms} Bathrooms, {square_feet} sqft in{" "}

@@ -21,8 +21,7 @@ const ImageSlider = () => {
         const looping = setInterval(() => nextImage(), 3000)
         return () => clearInterval(looping)
     },[])
-    console.log(images[current])
-    console.log()
+    
     return (
       <div className="flex items-center gap-3 ">
         <button onClick={prevImage} className="border-solid">

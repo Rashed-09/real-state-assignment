@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ContextProvider } from "../../AuthContext/AuthContext";
 
 const Register = () => {
-  const { createUsers } = useContext(ContextProvider)
+  const { createUsers } = useContext(ContextProvider);
   const navigate = useNavigate()
   const [passwordError, setPasswordError] = useState('')
 
@@ -12,6 +12,9 @@ const Register = () => {
     setPasswordError("")
     const emailValue = e.target.email.value;
     const passwordValue = e.target.password.value;
+    const nameValue = e.target.name.value;
+    const photo = e.target.photo.value; 
+    console.log(nameValue, photo)
 
     // password verification
     if(passwordValue.length < 6) {
@@ -34,6 +37,7 @@ const Register = () => {
         const message = e.message;
         setPasswordError(message)
       });
+      
   };
     return (
       <div className="hero bg-white min-h-screen">

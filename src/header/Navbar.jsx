@@ -7,8 +7,7 @@ import { ContextProvider } from "../AuthContext/AuthContext";
 const Navbar = () => {
   const links = <div className="space-x-3">
       <NavLink to={"/"}>Home</NavLink>
-      <NavLink to={"/forBuy"}>For Buy</NavLink>
-      <NavLink to={"/forRent"}>For Rent</NavLink>
+      <NavLink to={"/forSell"}>For Sell</NavLink>
       <NavLink to={"/register"}>Register</NavLink>
       <NavLink to={"/login"}>Login</NavLink>
       <NavLink to={"/updateprofile"}>UpDate Profile</NavLink>

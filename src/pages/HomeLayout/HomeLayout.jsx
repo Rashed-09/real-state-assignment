@@ -1,12 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import Houses from "./Houses/Houses";
+import ImageSlider from "./ImageSlider/ImageSlider";
 
 const HomeLayout = () => {
     const houses = useLoaderData()
     return (
       <div>
         <header>
-          <div>This is for image slider</div>
+          <div>
+            <ImageSlider></ImageSlider>
+          </div>
           <div className="text-center space-y-5 my-7">
             <h2 className="text-xl font-bold text-green-400">
               The Largest Real State Marketing Portal In Bangladesh

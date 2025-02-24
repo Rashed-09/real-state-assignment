@@ -5,6 +5,7 @@ import Register from "../pages/Register/Register";
 import HouseDetails from "../pages/HomeLayout/Houses/HouseDetails";
 import Login from "../pages/Register/Login/Login";
 import Error404 from "../ErrorPage/Error404";
+import ForSell from "../pages/ForRentAndSell/ForSell";
 
 
 
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomeLayout></HomeLayout>,
+        loader: () => fetch("/houses.json"),
+      },
+      {
+        path: "/forSell",
+        element: <ForSell></ForSell>,
         loader: () => fetch("/houses.json"),
       },
       {
